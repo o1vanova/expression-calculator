@@ -9,9 +9,7 @@ function expressionCalculator(expr) {
     } else {
         //remove all spaces
         let str = expr.replace(/ /ig, '');
-        let result = calculateExpressionInBrackets(str);
-        console.log(result) 
-        return result;
+        return calculateExpressionInBrackets(str);
     }    
 }
 
@@ -131,7 +129,7 @@ function calculate(x, y, type) {
         }
         case '/' : {
             if(right === 0) {
-                throw new Error("TypeError: Devision by zero.");
+                throw new Error("TypeError: Division by zero.");
             } else {
                 return left / right;
             }
